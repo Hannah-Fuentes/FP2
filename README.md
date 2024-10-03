@@ -13,3 +13,7 @@ Lista Numerada
 1. Uno
 2. Dos
 3. Tres
+
+**negrita**
+_italica texto_
+***negrita italica***
