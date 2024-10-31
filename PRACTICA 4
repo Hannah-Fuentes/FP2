@@ -109,6 +109,19 @@ int main()
 
 	//1.20 Escribir las instrucciones apropiadas para cada una de las siguientes condiciones:
 	//a) Si un ángulo es igual a 90 grados, imprimir el mensaje "El ángulo es un ángulo recto" sino imprimir el mensaje "El ángulo no es un ángulo recto".
+
+
+	int angulo;
+	cout << "Introduce el valor del ángulo: ";
+	cin >> angulo;
+	if (angulo == 90) {
+		cout << "El ángulo es un ángulo recto." << endl;
+	}
+	else {
+		cout << "El ángulo no es un ángulo recto." << endl;
+	}
+
+
 	//b) Si la temperatura es superior a 100 grados, visualizar el mensaje “por encima del punto de ebullición del agua” sino visualizar el mensaje “por debajo del punto de ebullición del agua”.
 	//c) Recibir un número, Si este número es positivo, sumar el número a total de positivos usando una variable que acumule los números negativos, sino sumar al total de negativos usando una
 	//variable que acumule los números negativos.
