@@ -1,0 +1,116 @@
+#include <iostream>
+#include <string>
+#include <iosmanip>
+#include <locale>
+
+using namespace std;
+
+int main()
+{
+   //1.16 Diseñar un programa que lea tres números A, B, C y visualice en pantalla el valor del más grande.
+
+	float A, B, C;
+
+	cout << "Ingresa el primer número: ";
+	cin >> A;
+
+	cout << "Ingresa el segundo número: ";
+	cin >> B;
+
+	cout << "Ingresa el tercer número: ";
+	cin >> C;
+
+	float mayor;
+
+	if (A >= B && A >= C) {
+		mayor = A;
+	}
+	else if (B >= A && B >= C) {
+		mayor = B;
+	}
+	else {
+		mayor = C;
+	}
+
+	cout << "El número más grande es: " << mayor << endl;
+
+
+	//1.17 Crear un programa que lea tres números diferentes, A, B, C, e imprime los valores máximo y mínimo.El procedimiento consistirá en comparaciones sucesivas de parejas de números.
+	//Cree el algoritmo, diagrama de flujo y código en C#
+
+
+
+
+
+	//1.18 Crear un programa al que le solicitemos la hora HH, MM, SS y nos calcule la hora dentro de un segundo más tarde.Leeremos las horas minutos y segundos como números enteros.
+
+	int HH, MM, SS;
+
+	cout << "Ingresa las horas: ";
+	cin >> HH;
+
+	cout << "Ingresa los minutos: ";
+	cin >> MM;
+
+	cout << "Ingresa los segundos: ";
+	cin >> SS;
+
+	SS++;
+	if (SS == 60) {
+		SS = 0;
+		MM++;
+	}
+	if (MM == 60) {
+		MM = 0;
+		HH++;
+	}
+	if (HH == 24) {
+		HH = 0;
+	}
+	
+	cout << "La hora dentro de un segundo es: "
+		<< (HH < 10 ? "0" : "") << HH << ":"
+		<< (MM < 10 ? "0" : "") << MM << ":"
+		<< (SS < 10 ? "0" : "") << SS << endl;
+
+
+	//1.19 Determinar el precio del boleto de ida y vuelta en avión, conociendo la distancia a recorrer y sabiendo que si el número de días de estancia es superior a 7 y la distancia
+	//superior a 800 km el billete tiene una reducción del 30 % .El precio por km es de 2.5 dólares.
+		
+	double calcularPrecioBoleto(double distancia, int diasEstancia) {
+
+
+		const double precioPorKm = 2.5;
+		double precioTotal = distancia * precioPorKm * 2;
+
+		if (diasEstancia > 7 && distancia > 800) {
+			precioTotal *= 0.7;
+		}
+
+		return precioTotal;
+	}
+
+	int main() {
+
+		double distancia;
+		int diasEstancia;
+
+		cout << "Introduce la distancia a recorrer en km: ";
+		cin >> distancia;
+
+		cout << "Introduce el número de días de estancia: ";
+		cin >> diasEstancia;
+
+		double precioBoleto = calcularPrecioBoleto(distancia, diasEstancia);
+
+		cout << "El precio del boleto de ida y vuelta es: $" << precioBoleto << endl; 
+
+
+
+	//1.20 Escribir las instrucciones apropiadas para cada una de las siguientes condiciones:
+	//a) Si un ángulo es igual a 90 grados, imprimir el mensaje "El ángulo es un ángulo recto" sino imprimir el mensaje "El ángulo no es un ángulo recto".
+	//b) Si la temperatura es superior a 100 grados, visualizar el mensaje “por encima del punto de ebullición del agua” sino visualizar el mensaje “por debajo del punto de ebullición del agua”.
+	//c) Recibir un número, Si este número es positivo, sumar el número a total de positivos usando una variable que acumule los números negativos, sino sumar al total de negativos usando una
+	//variable que acumule los números negativos.
+	//d) Si “x” es mayor que “y”, y “z” es menor que “y”, imprimir “x”.
+	//e) Si la distancia es mayor que 20 y menos que 35, crear y leer un valor para luna variable de tipo entero llamada “tiempo”.
