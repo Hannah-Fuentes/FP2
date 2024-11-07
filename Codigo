@@ -1,0 +1,70 @@
+#include <iostream>
+
+int main() {
+    char opcion;
+    int numero1, numero2, total;
+    
+    do {
+        // Mostrar menú
+        std::cout << "Seleccione una operación:" << std::endl;
+        std::cout << "(+) Suma" << std::endl;
+        std::cout << "(-) Resta" << std::endl;
+        std::cout << "(*) Multiplicación" << std::endl;
+        std::cout << "(/) División" << std::endl;
+        std::cout << "(%) Residuo" << std::endl;
+        std::cout << "(s) Salir" << std::endl;
+        std::cout << "Opción: ";
+        std::cin >> opcion;
+
+        if (opcion == 's') break;
+
+        // Pedir los operandos
+        std::cout << "Introduce el primer número: ";
+        std::cin >> numero1;
+        std::cout << "Introduce el segundo número: ";
+        std::cin >> numero2;
+
+        // Ejecutar operación según la opción elegida
+        switch (opcion) {
+            case '+':
+                total = numero1 + numero2;
+                std::cout << "Resultado: " << total << std::endl;
+                break;
+            case '-':
+                total = numero1 - numero2;
+                std::cout << "Resultado: " << total << std::endl;
+                break;
+            case '*':
+                total = numero1 * numero2;
+                std::cout << "Resultado: " << total << std::endl;
+                break;
+            case '/':
+                if (numero2 != 0) {
+                    total = numero1 / numero2;
+                    std::cout << "Resultado: " << total << std::endl;
+                } else {
+                    std::cout << "Error: División por cero no permitida." << std::endl;
+                }
+                break;
+            case '%':
+                if (numero2 != 0) {
+                    total = numero1 % numero2;
+                    std::cout << "Resultado: " << total << std::endl;
+                } else {
+                    std::cout << "Error: División por cero no permitida." << std::endl;
+                }
+                break;
+            default:
+                std::cout << "Opción no válida. Por favor elige otra vez." << std::endl;
+        }
+
+        // Reiniciar las variables
+        numero1 = 0;
+        numero2 = 0;
+        total = 0;
+
+    } while (true);
+
+    std::cout << "Has salido del programa." << std::endl;
+    return 0;
+}
