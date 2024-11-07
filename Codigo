@@ -139,3 +139,61 @@ int main() {
 
     return 0;
 }
+
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+int main() {
+    srand(static_cast<unsigned>(time(0))); // Inicializa la semilla aleatoria
+    int tiempo = 12;
+    char direccion;
+    bool salir = false;
+
+    while (tiempo > 0 && !salir) {
+        std::cout << "Corredor está corriendo adelante." << std::endl;
+        std::cout << "¿Quieres cambiar de dirección? (i: izquierda, d: derecha, n: no): ";
+        std::cin >> direccion;
+
+        // Simula un obstáculo aleatorio
+        bool obstaculo = rand() % 2;
+        if (obstaculo) {
+            std::cout << "¡Obstáculo encontrado! Perdiste 3 unidades de tiempo." << std::endl;
+            tiempo -= 3;
+        } else {
+            std::cout << "Pasaste un obstáculo fácil. Perdiste 1 unidad de tiempo." << std::endl;
+            tiempo -= 1;
+        }
+
+        // Simula un premio aleatorio
+        bool premio = rand() % 2;
+        if (premio) {
+            std::cout << "¡Encontraste un premio! Ganaste 3 unidades de tiempo." << std::endl;
+            tiempo += 3;
+        } else {
+            std::cout << "Ganaste 1 unidad de tiempo extra." << std::endl;
+            tiempo += 1;
+        }
+
+        // Mostrar el tiempo restante
+        std::cout << "Tiempo restante: " << tiempo << " unidades." << std::endl;
+
+        // Verificar si se debe salir del juego
+        std::cout << "Presiona 'e' para salir del juego o cualquier otra tecla para continuar: ";
+        char opcion;
+        std::cin >> opcion;
+        if (opcion == 'e') {
+            salir = true;
+        }
+    }
+
+    if (tiempo <= 0) {
+        std::cout << "El tiempo se ha acabado. ¡Juego terminado!" << std::endl;
+    } else {
+        std::cout << "¡Gracias por jugar!" << std::endl;
+    }
+
+    return 0;
+}
+
