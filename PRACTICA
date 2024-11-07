@@ -51,4 +51,13 @@ int main()
 		break;
 	}
 
+
+
+
+while (i <= 10) {
+	castigo = rand() % 2;
+	cout << castigo << endl;
+	i++;
+}
+
 }
