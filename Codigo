@@ -68,3 +68,74 @@ int main() {
     std::cout << "Has salido del programa." << std::endl;
     return 0;
 }
+
+
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string tarjeta, pin;
+    float saldo = 3450.00;
+    char opcion;
+    int retiro;
+
+    // Validar tarjeta
+    std::cout << "Inserte su tarjeta (banda magnética o chip): ";
+    std::cin >> tarjeta;
+
+    if (tarjeta != "1234-5678-9012-3456") { // Supongamos que esta es la tarjeta válida
+        std::cout << "Tarjeta invalida." << std::endl;
+        return 0;
+    }
+
+    // Validar PIN
+    std::cout << "Ingrese su PIN de 4 dígitos: ";
+    std::cin >> pin;
+
+    if (pin != "1234" || pin.length() != 4) {
+        std::cout << "PIN invalido." << std::endl;
+        return 0;
+    }
+
+    do {
+        // Mostrar menú
+        std::cout << "Seleccione una operación:" << std::endl;
+        std::cout << "(1) Retiro" << std::endl;
+        std::cout << "(2) Consulta de saldo" << std::endl;
+        std::cout << "(s) Salir" << std::endl;
+        std::cout << "Opción: ";
+        std::cin >> opcion;
+
+        switch (opcion) {
+            case '1':
+                // Opción de retiro
+                std::cout << "Ingrese la cantidad a retirar: ";
+                std::cin >> retiro;
+
+                if (retiro > saldo) {
+                    std::cout << "Fondos insuficientes." << std::endl;
+                    break;
+                }
+
+                saldo -= retiro;
+                std::cout << "Retiro exitoso. Su saldo remanente es: " << saldo << " pesos." << std::endl;
+                break;
+                
+            case '2':
+                // Opción de consulta de saldo
+                std::cout << "Su saldo es: " << saldo << " pesos." << std::endl;
+                break;
+
+            case 's':
+                // Opción para salir
+                std::cout << "Gracias por usar el cajero." << std::endl;
+                break;
+
+            default:
+                std::cout << "Opción no válida. Por favor elige otra vez." << std::endl;
+        }
+
+    } while (opcion != 's');
+
+    return 0;
+}
