@@ -121,3 +121,86 @@ int main()
 		cout << elemento << endl;
 	}
 }
+
+
+
+PRACTICA J
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	//Ejercicio #1 Realice el programa en C++ que solicite un número e imprima el numero multiplicado por 10 y esto lo seguirá haciendo hasta que el usuario ingrese un cero.
+	// Utilice el arreglo preconstruido.
+
+	int numero;
+
+	cout << "Ingrese un número: ";
+	cin >> numero;
+
+	while (numero != 0)
+	{
+		cout << "El número multiplicado por 10 es: " << numero * 10 << endl;
+		cout << "Ingrese un número (Ingrese 0 para salir): ";
+		cin >> numero;
+	}
+	cout << "El programa ha terminado." << endl;
+
+
+
+
+	//Ejercicio #2 Realice el programa en C++ que encuentre el mayor elemento de un arreglo de tipo entero.Utilice el arreglo preconstruido
+
+	int arreglo[] = { 3,5,1,9,2,10,4,8,7 };
+	int mayor = arreglo[0];
+
+	for (int i = 1; i < sizeof(arreglo) / sizeof(arreglo[0]); i++)
+	{
+		if (arreglo[i] > mayor)
+		{
+			mayor = arreglo[i];
+		}
+	}  cout << "El mayor elemento de arreglo es: " << mayor << endl;
+
+
+
+
+	//Ejercicio #3: Realice el programa en C++ que encuentre el menor elemento de un arreglo de tipo entero.Utilice el arreglo preconstruido.
+
+	int arreglo[] = { 3, 5, 1, 9, 2, 10, 4, 8, 7 };
+	int menor = arreglo[0];
+
+	for (int i = 1; i < sizeof(arreglo) / sizeof(arreglo[0]); i++)
+	{
+		if (arreglo[i] < menor)
+		{
+			menor = arreglo[i];
+		}
+	} cout << "El menor elemento del arreglo es: " << menor << endl;
+
+
+
+
+	// Ejercicio #4 Realice el programa en C++ calcule el promedio de los elementos de un arreglo de tipo entero.Utilice el arreglo preconstruido.
+
+	int arreglo[] = { 3,5,1,9,2,10,4,8,7 };
+	int suma = 0;
+	int tamaño = sizeof(arreglo) / sizeof(arreglo[0]);
+
+	for (int i = 0; i < tamaño; i++)
+	{
+		suma += arreglo[i];
+	}
+	double promedio = static_cast<double>(suma) / tamaño;
+
+	cout << "El promedio de los elementos del arreglo es: " << promedio << endl;
+
+
+
+
+	//Ejercicio #5 Realice el programa en C++ que encuentre el segundo mayor elemento de un arreglo.Utilice arreglo preconstruido.
+
+
+}
