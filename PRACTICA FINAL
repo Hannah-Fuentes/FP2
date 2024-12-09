@@ -1,0 +1,283 @@
+using System;
+using System.CodeDom.Compiler;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Reflection.Emit;
+using System.Runtime.ConstrainedExecution;
+using System.Runtime.Remoting.Messaging;
+using System.Security.Cryptography;
+using System.Security.Policy;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //PRÁCTICA B
+
+            //1.1 Realiza un código que ejecute las siguientes operaciones e imprima los resultados de ejecutar cada operación usando la instrucción cin
+            //1) 3 + 5 * 2 / 2 – 1
+            //2) 3 + 10 / 2 – 1
+            //3) 3 + 5 – 1
+            //4) 8 – 1
+            //5) 1 / 3 * 3
+
+
+
+
+
+            //1.2 Escriba el código que pregunte al usuario por un número y escribir el resultado de la potencia del número.De la siguiente manera:
+            //Ingrese un número: 4
+            //La potencia de 4 es 16
+
+
+
+
+            //1.3 Escriba un programa que pregunte al usuario por el número de yardas a convertir en metros.Recuerde que la unidad de conversión de una yarda equivale a 0.9144 metros.
+            //Ingrese las yardas: 10
+            //Número en yardas: 9.144
+
+
+
+
+
+            //1.4 Escriba el código de un programa que pregunte que calcule la depreciación de un auto con valor de 200,000 pesos donde se depreciará por cinco años, considerando que solo se
+            //puede depreciar el 80 % del valor original pagado por el vehículo. Imprima en consola el valor de deducción por cada año.
+
+
+            //1.5 Escriba un cálculo que calcule el porcentaje de deducción de impuestos del salario mensual de 25,000 pesos, donde este se deducirá un impuesto fijo de 900 pesos, más una
+            //parte porcentual de 1.5 % sobre el cálculo de sueldo mensual – 900, Imprima el valor total del impuesto a deducir, y el sueldo neto que recibirá el empleado.
+
+
+
+
+
+            //1.6 Escriba el código de cada una de las siguientes operaciones en C++; por favor cree una variable con el nombre de su elección e imprima el resultado con la instrucción cout:
+            //1) 3 * 4
+            //2) 12 / 3
+            //3) 12 % 3
+            //4) 12 % 7
+            //5) 3 + 3.0
+            //6) 10 / 100
+            //7) Potencia 3 a la 2, para esta instrucción usar
+            //i) pow(número a elevar, potencia a elevar)
+
+
+
+            //1.7 Comparaciones. Cuál será el resultado de cada comparación y escriba el código e imprima los resultados usando la instrucción cout, NOTA: Las comparaciones encierrelas entre paréntesis.
+            //Si a = 10 y b = 20
+            //i. (a > b)
+            //ii. (a < b)
+            //iii. (a == b)
+            //iv. (a != b)
+            //v. (a + b) > 100
+            //vi. (a - b) == 0
+            //vii. (a * b) > 500
+            //viii. (a * b) < 100
+            //ix. (a - b) < 0
+            //x.a < 20
+
+
+
+
+
+
+
+
+
+            //PRÁCTICA C
+
+
+
+            //1.1 Escriba el código que pregunte al usuario por un número y escribir el resultado del cuadrado.De la siguiente manera:
+            //Ingrese un número: 5
+            //El cuadrado de 5 es 25
+
+
+
+            //1.2 Escriba un código que solicite un número entero e imprima los resultados de x, 2x, 3x, 4x y 5x.Donde x es el número ingresado por el usuario, y los subsecuentes implican
+            //multiplicar por 2, multiplicar por 3, multiplicar por 4 y multiplicar por 5, y escribir el resultado en el siguiente formato:
+            //Ingrese un número: 7
+            //7-- 14-- 21-- 28-- 35
+
+
+
+            //1.3 Escriba un programa que pregunte al usuario por su peso y en kilogramos y lo convierta en libras, el factor de conversión es 2.2 libras por un kilo
+
+
+
+
+
+            //1.4 Escriba el código de un programa que pregunte por 3 números (use 3 instrucciones de entrada). Cree las tres variables de entrada, adicionalmente cree una variable que se
+            //llame Total y Promedio, donde Total contendrá la suma de las tres variables y Promedio que será el cálculo del promedio de los 3 números.
+
+
+
+
+
+            //1.5 Escriba un cálculo que calcule la propina de un Total, donde le pregunte al usuario por el total de la cuenta, y el porcentaje de propina a aplicar y guardarlo en una variable que
+            //se llame Porcentaje y como resultado imprima la cantidad a dar de propina.
+
+
+
+
+            //1.6 Escriba el código que solicite un número al usuario y si este número es mayor a 100, que imprima “El número es mayor a 100”, de lo contrario que imprima “El número es menor o igual que 100”
+
+
+
+
+
+            //1.7 Escriba el código que solicite un número al usuario si este número es menor a cero entonces imprima que “el número es negativo”, de lo contrario imprimir el “número es positivo”
+
+
+
+
+
+            //1.8 Escriba un programa que pregunte por el mail del usuario y guardarlo en una variable llamada “Miemail”, y luego que pregunte por un password y se guarde en una variable
+            //llamada “Password_Ingresado”, validar si el password es igual a “12345” entonces imprimir “Felicidades password correcto” de otra manera imprimir “Su password es incorrecto”
+
+
+
+
+
+            //1.9 Crear un código que convierta de grados farenheit a grados centígrados, usando una variable llamada Farenheith; basado en la siguiente formula:
+            //(Farenheith-32) * 5/9
+            //Si el código es igual a 32 imprimir 0 “cero” grados centígrados, si es mayor o menor a 32 calcular los grados centígrados e imprimir los grados en número y centígrados en letra.
+
+
+
+
+            //1.10 Crear el código que reciba el peso y la estatura del usuario, y calcule la masa corporal en base a la fórmula:
+            //masa corporal = peso / (estatura * estatura)
+            //Con el resultado desplegar los siguientes letreros en caso de que la masa corporal sea:
+            //Masa Corporal
+            //< 18.5 Abajo del peso normal
+            //>= 18.5 y < 25 Peso Normal
+            //>= 25 y < 30 Sobrepeso
+            //>= 30 y < 35 Obeso Clase 1
+            //>= 35 y < 40 Obeso Clase 2
+            //>= 40 Obeso Clase 3
+
+
+
+
+
+
+
+
+            //PRÁCTICA D
+
+
+
+            //1.1 Diseñar un programa que lea tres números A, B, C y visualice en pantalla el valor del más grande.
+
+
+
+
+
+
+
+
+            //1.2 Crear un programa que lea tres números diferentes, A, B, C, e imprime los valores máximo y mínimo.El procedimiento consistirá en comparaciones sucesivas de parejas de
+            //números.Cree el algoritmo, diagrama de flujo y código en C#
+
+
+
+
+
+
+
+
+            //1.3 Crear un programa al que le solicitemos la hora HH, MM, SS y nos calcule la hora dentro de un segundo más tarde. Leeremos las horas minutos y segundos como números enteros.
+
+
+
+
+
+
+
+
+            //1.4 Determinar el precio del boleto de ida y vuelta en avión, conociendo la distancia a recorrer y sabiendo que si el número de días de estancia es superior a 7 y la distancia
+            //superior a 800 km el billete tiene una reducción del 30 %.El precio por km es de 2.5 dólares.
+
+
+
+
+
+
+            //1.5 Escribir las instrucciones apropiadas para cada una de las siguientes condiciones:.
+            //a) Si un ángulo es igual a 90 grados, imprimir el mensaje "El ángulo es un ángulo recto" sino imprimir el mensaje "El ángulo no es un ángulo recto".
+            //b) Si la temperatura es superior a 100 grados, visualizar el mensaje “por encima del punto de ebullición del agua” sino visualizar el mensaje “por debajo del punto de ebullición del agua”.
+            //c) Recibir un número, Si este número es positivo, sumar el número a total de positivos usando una variable que acumule los números negativos, sino sumar al
+            //total de negativos usando una variable que acumule los números negativos.
+            //d) Si “x” es mayor que “y”, y “z” es menor que “y”, imprimir “x”.
+            //e) Si la distancia es mayor que 20 y menos que 35, crear y leer un valor para luna variable de tipo entero llamada “tiempo”.
+
+
+
+
+
+            //PRÁCTICA E
+
+
+
+            //1.1 Crear el código de un programa en C++ que pregunte si quiere salir del ciclo usando la instrucción “do … while”, y leer un “string” donde el usuario tiene solo dos opciones para
+            //contestar.Si el usuario contesta “SI” entonces salir del ciclo, su contesta “NO” entonces volver a hacer la pregunta “Quieres salir del ciclo? [SI/ NO]”. Ojo la contestación deben ser
+            //estrictamente mayúsculas
+
+
+
+
+            //1.2  Hacer un menú de opciones que ejecute las operaciones aritméticas básicas (+) suma, (-) resta, (*) multiplicación, (/) división y(%) residuo.que muestre un menú como el que
+            //se muestra en la figura de abajo. Deberá usar la instrucción “do … while”, y deberá leer un carácter y en base a la opción deberá ejecutar la operación, según la opción que elija..
+
+            //Los dos operandos deberán ser preguntados al usuario, convertirlos a “int” y guardados en dos variables con nombres “numero1” y “numero2”, el resultado debe ser guardado en
+            //una variable llamada “total”, el total debe ser impreso en la consola.
+
+            //Una vez que termine la operación, inicialice las variables “numero1”, “numero2” y “total” en cero y el usuario podrá hacer la siguiente operación, hasta que el usuario presione “s”
+            //de salir entonces terminará el programa.
+
+
+
+            //1.3 Crear un programa en C++ que “simule” dos operaciones básicas de un cajero que es retiro y consulta de saldo, el proceso debe considerar la lectura y validación de banda
+            //magnética o chip *.Si la tarjeta es invalida, terminar el proceso usando la instrucción “break “de lo contrario pedir un pin de 4 dígitos, validar que solo sean 4 dígitos, el digito a
+            //validar será “1234” de lo contrario será pin invalido.
+
+            //Las opciones que deberá mostrar el cajero si el chip y el pin son válidos será:
+
+            //El saldo inicial de la cuenta del cliente será 3,450.00 pesos, en la opción de retiro, deberá validar si la cantidad que quiere retirar es mayor al saldo, entonces desplegará la opción
+            //fondos insuficientes, y terminará la operación.
+
+            //De tener fondos suficientes se le restará al saldo inicial y mostrará el saldo remanente antes de terminar la operación.
+
+            //Si desea cancelar la operación deberá salir del menú
+
+            //Para la consulta, solo deberá mostrar el saldo y terminar la operación con el cajero
+
+
+
+            //1.4 Hacer un programa que “simule” “Temple Run” donde el corredor iniciara siempre corriendo hacia adelante es decir dirección “adelante”, la dirección tiene otros dos posibles valores “izquierda” y “derecha”.
+
+            //La pista es una pista sin fin, con un tiempo inicial limitado a 12 unidades; la vida y el tiempo son uno solo concepto, cuando el tiempo se acaba, entonces, el juego también
+
+            //Se tienen dos modificadores del corredor, uno es un castigo, el otro es un premio, estos son totalmente aleatorios.
+
+
+
+
+
+
+
+        }
+
+
+
+    }
+}
